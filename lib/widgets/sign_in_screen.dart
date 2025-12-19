@@ -13,9 +13,9 @@ class SignInScreen extends StatelessWidget {
           padding: const EdgeInsets.all(24.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch, // Розтягує кнопки на всю ширину
+            crossAxisAlignment: CrossAxisAlignment.stretch, 
             children: [
-              // Image
+            
               const SizedBox(
                 height: 120,
                 child: Icon(Icons.flutter_dash, size: 100, color: Colors.indigo),
@@ -29,7 +29,7 @@ class SignInScreen extends StatelessWidget {
               ),
               const SizedBox(height: 30),
 
-              // TextField (Логін)
+          
               const TextField(
                 decoration: InputDecoration(
                   labelText: 'Логін',
@@ -38,7 +38,6 @@ class SignInScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
 
-              // TextField (Пароль)
               const TextField(
                 obscureText: true,
                 decoration: InputDecoration(
@@ -48,7 +47,6 @@ class SignInScreen extends StatelessWidget {
               ),
               const SizedBox(height: 24),
 
-              // ElevatedButton (Вхід)
               ElevatedButton(
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
@@ -59,7 +57,6 @@ class SignInScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
 
-              // OutlinedButton (Реєстрація)
               OutlinedButton(
                 onPressed: () {
                   Navigator.push(
@@ -72,7 +69,6 @@ class SignInScreen extends StatelessWidget {
 
               const SizedBox(height: 12),
 
-              // TextButton (Відновлення)
               TextButton(
                 onPressed: () {
                   Navigator.push(
@@ -88,4 +84,5 @@ class SignInScreen extends StatelessWidget {
       ),
     );
   }
+
 }
