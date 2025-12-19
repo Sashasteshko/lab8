@@ -12,13 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Lab 7: Theming',
-      debugShowCheckedModeBanner: false, // Прибирає стрічку debug
-      // --- ТУТ МИ НАЛАШТОВУЄМО ГЛОБАЛЬНИЙ СТИЛЬ (ThemeData) ---
+      debugShowCheckedModeBanner: false, 
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
 
-        // 1. Стиль для всіх текстових полів (TextField)
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           fillColor: Colors.indigo.withOpacity(0.05),
@@ -33,7 +31,6 @@ class MyApp extends StatelessWidget {
           contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         ),
 
-        // 2. Стиль для основних кнопок (ElevatedButton)
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.indigo,
@@ -46,7 +43,6 @@ class MyApp extends StatelessWidget {
           ),
         ),
 
-        // 3. Стиль для контурних кнопок (OutlinedButton)
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: OutlinedButton.styleFrom(
             padding: const EdgeInsets.symmetric(vertical: 16),
@@ -60,4 +56,5 @@ class MyApp extends StatelessWidget {
       home: const SignInScreen(),
     );
   }
+
 }
